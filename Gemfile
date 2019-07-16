@@ -7,7 +7,7 @@ ruby '2.6.3'
 gem 'rails', '~> 6.0.0.rc1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', group: :development
-gem 'pg',group: :production
+#gem 'pg',group: :production
 gem 'rails_12factor'
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
@@ -60,3 +60,7 @@ gem 'jquery-rails'
 gem 'rails-controller-testing'
 
 gem 'bcrypt',         '3.1.12'
+gem 'faker',          '1.7.3'
+
+gem 'will_paginate'
+gem 'bootstrap-will_paginate', '1.0.0'

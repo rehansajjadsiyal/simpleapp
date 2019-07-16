@@ -8,6 +8,7 @@ class SessionsController < ApplicationController
     if user && user.authenticate(params[:session][:password])
       params[:session][:remember_me] == '1' ? remember(user) : forget(user)
       log_in user
+      remember (user)
       redirect_back_or user
       # log_in user
       # remember user

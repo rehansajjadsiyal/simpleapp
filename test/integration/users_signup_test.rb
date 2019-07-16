@@ -20,7 +20,7 @@ test "valid signup information" do
                                        password_confirmation: "password" } }
   end
   follow_redirect!
-  assert_template 'users/show'
+  assert_template 'users/index'
   assert is_logged_in?
 end
   # test "the truth" do

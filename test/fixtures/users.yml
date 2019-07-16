@@ -4,5 +4,11 @@ michael:
   password_digest: <%= User.digest('password') %>
 
 
+rehan:
+  name: Rehan
+  email: admin@gmail.com
+  password_digest: <%= User.digest('password') %>
+admin: true
 
-  #empty
+
+#empty
