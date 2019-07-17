@@ -1,8 +1,5 @@
 Rails.application.routes.draw do
 
-
-  get '/new'
-  get '/edit'
   get 'sessions/new'
   get 'users/new'
   root 'static_pages#home'
@@ -27,5 +24,6 @@ get '/account_activations/:id/edit(.:format)', to:'account_activations#edit'
   resources :users
 
   resources :account_activations, only:[:edit]
+  resources :password_resets,     only: [:new, :create, :edit, :update]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

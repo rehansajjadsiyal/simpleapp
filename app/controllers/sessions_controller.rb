@@ -1,5 +1,7 @@
 class SessionsController < ApplicationController
-
+def setup
+  user=users(:gulfam)
+end
   def new
   end
 
@@ -15,7 +17,8 @@ class SessionsController < ApplicationController
         message += "Check your email for the activation link."
         flash[:warning] = message
         redirect_to root_url
-      end # log_in user
+      end
+      # log_in user
       # remember user
       # redirect_to user
     else

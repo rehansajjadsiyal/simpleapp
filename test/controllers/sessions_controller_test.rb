@@ -6,11 +6,7 @@ class SessionsControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
   test "should get create" do
-<<<<<<< HEAD
-    get login_path
-=======
     post login_path
->>>>>>> account-activation
     assert_response :success
   end
   test "should get destroy" do

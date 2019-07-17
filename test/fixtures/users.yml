@@ -2,16 +2,12 @@ michael:
   name: Michael Example
   email: michael@example.com
   password_digest: <%= User.digest('password') %>
-<<<<<<< HEAD
 
 
 gulfam:
+
   name: gulfam
   email: gulfam@gmail.com
   password_digest: <%= User.digest('password') %>
   admin: true
-
-
-=======
->>>>>>> account-activation
 #empty

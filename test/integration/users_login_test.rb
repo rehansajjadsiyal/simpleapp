@@ -21,7 +21,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
     assert_select 'a[href=?]', user_path(@user), count: 0
   end
   def setup
-    @user = users(:michael)
+    @user = users(:gulfam)
   end
 
   test 'login with remembering' do
