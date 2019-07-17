@@ -2,7 +2,8 @@ require 'test_helper'
 
 class UserEditTest < ActionDispatch::IntegrationTest
   def setup
-    @user = users(:michael)
+    @user = User.create(name:'example',email:'foo@example.com',password:'foobar',
+                        password_confirmation:'foobar')
   end
 
   test "unsuccessful edit" do

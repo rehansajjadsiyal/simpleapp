@@ -20,8 +20,9 @@ Rails.application.routes.draw do
   get 'user', to:'users#index'
 
 
-
+get '/account_activations/:id/edit(.:format)', to:'account_activations#edit'
   resources :users
 
+  resources :account_activations, only:[:edit]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

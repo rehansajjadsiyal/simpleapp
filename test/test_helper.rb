@@ -5,7 +5,9 @@ require 'rails/test_help'
 class ActiveSupport::TestCase
   # Run tests in parallel with specified workers
   parallelize(workers: :number_of_processors)
-
+ def setup
+   user=User.new(name:"Example User", email: "user@example.com",  password: "foobar", password_confirmation: "foobar")
+ end
   # Setup all fixtures in test/fixtures/*.yml for all tests in alphabetical order.
   fixtures :all
   def is_logged_in?
