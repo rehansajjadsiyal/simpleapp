@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
 
+
+  get '/new'
+  get '/edit'
   get 'sessions/new'
   get 'users/new'
   root 'static_pages#home'
