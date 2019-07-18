@@ -3,6 +3,10 @@ require 'test_helper'
 class UsersLoginTest < ActionDispatch::IntegrationTest
 
 
+  def setup
+    @user = users(:michael)
+  end
+
   test "login with valid information followed by logout" do
       get login_path
       assert_template 'sessions/new'
@@ -20,9 +24,7 @@ class UsersLoginTest < ActionDispatch::IntegrationTest
       assert_select "a[href=?]", logout_path,      count: 0
       assert_select "a[href=?]", user_path(@user), count: 0
   end
-    def setup
-      @user = users(:michael)
-    end
+
   # test "the truth" do
   #   assert true
   # end
