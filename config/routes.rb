@@ -18,12 +18,16 @@ Rails.application.routes.draw do
   delete '/user',to:'users#destroy'
 
   get 'user', to:'users#index'
+get 'user',to:'users#show'
 
 
 get '/account_activations/:id/edit(.:format)', to:'account_activations#edit'
   resources :users
+  resources :microposts
 
   resources :account_activations, only:[:edit]
   resources :password_resets,     only: [:new, :create, :edit, :update]
+
+  resources :microposts,          only: [:create, :destroy]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end
